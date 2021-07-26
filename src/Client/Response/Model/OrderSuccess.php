@@ -13,15 +13,26 @@ declare(strict_types=1);
 
 namespace NFQ\SyliusOmnisendPlugin\Client\Response\Model;
 
+use JMS\Serializer\Annotation as Serializer;
+
 class OrderSuccess
 {
-    /** @var string|null */
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     */
     private $email;
 
-    /** @var string|null */
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     */
     private $phone;
 
-    /** @var string|null */
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     */
     private $orderID;
 
     public function getEmail(): ?string

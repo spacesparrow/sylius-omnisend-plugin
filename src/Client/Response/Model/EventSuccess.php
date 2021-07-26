@@ -13,9 +13,14 @@ declare(strict_types=1);
 
 namespace NFQ\SyliusOmnisendPlugin\Client\Response\Model;
 
+use JMS\Serializer\Annotation as Serializer;
+
 class EventSuccess
 {
-    /** @var string */
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
     private $eventID;
 
     public function getEventID(): string

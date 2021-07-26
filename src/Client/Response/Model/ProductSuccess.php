@@ -13,9 +13,14 @@ declare(strict_types=1);
 
 namespace NFQ\SyliusOmnisendPlugin\Client\Response\Model;
 
+use JMS\Serializer\Annotation as Serializer;
+
 class ProductSuccess
 {
-    /** @var string */
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
     private $productID;
 
     public function getProductID(): string

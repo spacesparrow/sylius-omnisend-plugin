@@ -13,9 +13,14 @@ declare(strict_types=1);
 
 namespace NFQ\SyliusOmnisendPlugin\Client\Response\Model;
 
+use JMS\Serializer\Annotation as Serializer;
+
 class ContactSuccessList
 {
-    /** @var ContactSuccess[] */
+    /**
+     * @var ContactSuccess[]
+     * @Serializer\Type("array<NFQ\SyliusOmnisendPlugin\Client\Response\Model\ContactSuccess>")
+     */
     private $contacts;
 
     public function __construct()
