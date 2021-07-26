@@ -1,5 +1,5 @@
 {
-    "name": "spacesparrow/sylius-omnisend-plugin",
+    "name": "nordcode/sylius-omnisend-plugin",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin"],
     "description": "Omnisend plugin for Sylius.",
