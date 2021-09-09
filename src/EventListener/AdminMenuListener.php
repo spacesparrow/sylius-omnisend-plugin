@@ -32,11 +32,12 @@ class AdminMenuListener
             )
             ->setLabel('nfq_sylius_omnisend_plugin.menu.admin.main.events');
 
-        $submenu
-            ->addChild(
-                'nfq_sylius_omnisend_sync',
-                ['route' => 'nfq_sylius_omnisend_sync_batch_index']
-            )
-            ->setLabel('nfq_sylius_omnisend_plugin.menu.admin.main.sync');
+        //ToDo: takes too much time to sync products, need to move sync processes to queue
+//        $submenu
+//            ->addChild(
+//                'nfq_sylius_omnisend_sync',
+//                ['route' => 'nfq_sylius_omnisend_sync_batch_index']
+//            )
+//            ->setLabel('nfq_sylius_omnisend_plugin.menu.admin.main.sync');
     }
 }
