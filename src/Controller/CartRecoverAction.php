@@ -52,6 +52,7 @@ class CartRecoverAction
     public function __invoke(Request $request): RedirectResponse
     {
         $cartId = $request->get('cartId');
+        $locale = $request->query->get('_locale');
 
         if (null === $cartId) {
             return new RedirectResponse('sylius_shop_homepage');
@@ -77,7 +78,7 @@ class CartRecoverAction
         return new RedirectResponse(
             $request->headers->get(
                 'referer',
-                $this->router->generate('sylius_shop_cart_summary')
+                $this->router->generate('sylius_shop_cart_summary', ['_locale' => $locale])
             )
         );
     }
